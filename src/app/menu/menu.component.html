@@ -1,13 +1,9 @@
 <h1 mat-dialog-title>Menu</h1>
 <div mat-dialog-content class="menu-container">
     <mat-action-list>
-        <button mat-list-item (click)="openItem($event)"> Save </button>
-        <button mat-list-item (click)="openItem($event)"> Save </button>
-        <button mat-list-item (click)="openItem($event)"> Save </button>
-        <button mat-list-item (click)="openItem($event)"> Save </button>
-        <button mat-list-item (click)="openItem($event)"> Save </button>
-        <button mat-list-item (click)="openItem($event)"> Save </button>
-        <button mat-list-item (click)="openItem($event)"> Save </button>
-        <button mat-list-item (click)="openItem($event)"> Undo </button>
+        <button mat-list-item (click)="openItem($event)" routerLink=''>Inicio</button>
+        <button mat-list-item (click)="openItem($event)" routerLink='/academy'>Academia</button>
+        <button mat-list-item (click)="openItem($event)" routerLink='/fortress'>Fortaleza das Trevas</button>
+        <button mat-list-item (click)="openItem($event)">Fechar</button>
     </mat-action-list>
 </div>

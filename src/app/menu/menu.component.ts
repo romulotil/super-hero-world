@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AppComponent } from '../app.component';
 
 @Component({
@@ -11,7 +12,9 @@ import { AppComponent } from '../app.component';
 export class MenuComponent implements OnInit {
 
   constructor(//private _bottomSheetRef: MatBottomSheetRef<AppComponent>,
-    public dialogRef: MatDialogRef<MenuComponent>) { }
+    private route: ActivatedRoute,
+    private router: Router,
+    private dialogRef: MatDialogRef<MenuComponent>) { }
 
   ngOnInit(): void {
   }
