@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';
+import { MatDialog } from '@angular/material/dialog';
 import { MenuComponent } from './menu/menu.component';
 
 @Component({
@@ -9,9 +9,18 @@ import { MenuComponent } from './menu/menu.component';
 })
 export class AppComponent {
   title = 'super-hero-world';
-  constructor(private _bottomSheet: MatBottomSheet) {}
+  constructor(
+    public dialog: MatDialog) { }
 
   openMenu() {
-    this._bottomSheet.open(MenuComponent);
+    const dialogRef = this.dialog.open(MenuComponent, {
+      width: '100vw',
+      // data: {name: this.name, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      // console.log('The dialog was closed');
+      // this.animal = result;
+    });
   }
 }
