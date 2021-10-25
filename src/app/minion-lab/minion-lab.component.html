@@ -1,1 +1,30 @@
-<p>minion-lab works!</p>
+<div class="lab-container">
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Laboratório de Capangas</h1>
+            <p>Desenvolva os capangas</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>minions</h2>
+            <mat-action-list>
+                <button mat-list-item *ngFor="let minion of minions" (click)="buyMinion(minion)">
+                    {{minion.name}} - {{minionPrice(minion)}}
+                </button>
+            </mat-action-list>
+        </div>
+        <div class="col">
+            <h2>pesquisados</h2>
+            <mat-action-list>
+                <button mat-list-item *ngFor="let results of labResults">
+                    {{minionName(results.minionId)}} - {{results.quantity}}
+                </button>
+            </mat-action-list>
+        </div>
+    </div>
+</div>
